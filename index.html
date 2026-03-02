@@ -28,19 +28,26 @@
         .bg-cream { background-color: #fdfbf7; }
     </style>
 </head>
-</body>
 <body class="bg-cream text-gray-800">
 
     <!-- Navigation -->
     <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gold/20 shadow-sm">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold tracking-widest text-yellow-700 brand-font">VARIETY JEWELS</div>
+            <!-- Logo -->
+            <div class="flex items-center space-x-3">
+                <img src="assets/images/logo.png" alt="Variety Jewels Logo" class="h-12 w-auto">
+                <div class="text-2xl font-bold tracking-widest text-yellow-700 brand-font">VARIETY JEWELS</div>
+            </div>
+
+            <!-- Navigation Links -->
             <div class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-wider">
                 <a href="index.html" class="hover:text-yellow-600 transition">Home</a>
                 <a href="about.html" class="hover:text-yellow-600 transition">About</a>
                 <a href="product.html" class="hover:text-yellow-600 transition">Products</a>
                 <a href="#contact" class="hover:text-yellow-600 transition">Contact</a>
             </div>
+
+            <!-- Cart -->
             <div class="flex items-center space-x-5">
                 <div class="relative cursor-pointer" aria-label="Shopping Cart">
                     <span>🛒</span>
