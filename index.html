@@ -3,118 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>varietyjewels_np | Home</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Variety Jewels | Premium Gold Stainless Steel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --black: #1a1a1a;
-            --white: #ffffff;
-            --silver: #C0C0C0;
-            --light-grey: #f4f4f4;
-            --shadow: 0 4px 15px rgba(0,0,0,0.1);
-            --transition: 0.3s ease;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', sans-serif; color: var(--black); line-height: 1.6; }
-
-        /* Sticky Navigation */
-        nav {
-            position: sticky; top: 0; z-index: 1000;
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 1rem 10%; background: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-        .logo { font-weight: 600; font-size: 1.5rem; letter-spacing: 1px; }
-        .nav-links { display: flex; list-style: none; gap: 2rem; }
-        .nav-links a { text-decoration: none; color: var(--black); transition: var(--transition); }
-        .nav-links a:hover { color: var(--silver); }
-
-        /* Hero Section */
-        .hero {
-            height: 70vh;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                        url('https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&q=80&w=1600');
-            background-size: cover; background-position: center;
-            display: flex; flex-direction: column; justify-content: center; align-items: center;
-            color: var(--white); text-align: center;
-        }
-        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
-        .hero p { font-size: 1.2rem; font-weight: 300; }
-
-        /* Welcome Section */
-        .welcome { padding: 5rem 10%; text-align: center; background: var(--light-grey); }
-
-        /* Featured Preview (All 5 Items) */
-        .featured { padding: 5rem 10%; }
-        .section-title { text-align: center; margin-bottom: 3rem; font-size: 2rem; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
-        .card {
-            background: var(--white); border-radius: 8px; overflow: hidden;
-            box-shadow: var(--shadow); transition: var(--transition); text-align: center;
-            padding-bottom: 1rem;
-        }
-        .card:hover { transform: translateY(-10px); }
-        .card img { width: 100%; height: 220px; object-fit: cover; }
-        .card h3 { font-size: 1rem; margin: 10px 0; }
-        .card .price { font-weight: 600; color: var(--black); }
-
-        footer { background: var(--black); color: var(--white); padding: 3rem 10%; text-align: center; }
+        body { font-family: 'Montserrat', sans-serif; }
+        h1, h2, h3, .brand-font { font-family: 'Playfair Display', serif; }
+        .gold-gradient { background: linear-gradient(135deg, #d4af37 0%, #f9f295 50%, #d4af37 100%); }
+        .bg-cream { background-color: #fdfbf7; }
     </style>
 </head>
-<body>
-    <nav>
-        <div class="logo">varietyjewels_np</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="product.html">Products</a></li>
-        </ul>
+<body class="bg-cream text-gray-800">
+
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gold/20 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-widest text-yellow-700">VARIETY JEWELS</div>
+            <div class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-wider">
+                <a href="index.html" class="hover:text-yellow-600 transition">Home</a>
+                <a href="about.html" class="hover:text-yellow-600 transition">About</a>
+                <a href="product.html" class="hover:text-yellow-600 transition">Products</a>
+                <a href="#contact" class="hover:text-yellow-600 transition">Contact</a>
+            </div>
+            <div class="flex items-center space-x-5">
+                <div class="relative cursor-pointer">
+                    <span>🛒</span>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-yellow-700 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">0</span>
+                </div>
+            </div>
+        </div>
     </nav>
 
-    <header class="hero">
-        <h1>Timeless Shine. Everyday Elegance.</h1>
-        <p>Premium Stainless Steel Jewelry for Every Occasion</p>
+    <header id="home" class="relative h-[80vh] flex items-center justify-center text-center text-white">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover brightness-50" alt="Hero Background">
+        </div>
+        <div class="relative z-10 px-4">
+            <h1 class="text-5xl md:text-7xl mb-4">Timeless Elegance</h1>
+            <p class="text-lg md:text-xl font-light mb-8 tracking-wide">Premium Gold Stainless Steel & AD Jewelry Collection</p>
+            <a href="#collection" class="bg-yellow-600 hover:bg-yellow-700 text-white px-10 py-3 uppercase text-sm tracking-widest transition">Shop Collection</a>
+        </div>
     </header>
 
-    <section class="welcome">
-        <h2>Welcome to Variety Jewels</h2>
-        <p>Your destination for minimalist, durable, and luxury stainless steel accessories.</p>
+    <section id="collection" class="py-20 max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl mb-2">Our Exquisite Pieces</h2>
+            <div class="h-1 w-20 bg-yellow-600 mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <!-- Your 3 Product Cards Here -->
+            <div class="bg-white group overflow-hidden shadow-sm hover:shadow-xl transition p-4 border border-gray-100">
+                <div class="relative h-80 overflow-hidden mb-4 bg-gray-100">
+                    <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&q=80&w=600" alt="Gold Ring" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <span class="absolute top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 uppercase">-20% OFF</span>
+                </div>
+                <h3 class="text-xl mb-1">Eternal Gold Band</h3>
+                <p class="text-gray-500 text-sm mb-3">Stainless Steel • 18k Gold Plated</p>
+                <div class="flex justify-between items-center mb-4">
+                    <div>
+                        <span class="text-xl font-semibold text-yellow-700">Rs450.00</span>
+                        <span class="text-gray-400 line-through text-sm ml-2">Rs550.00</span>
+                    </div>
+                </div>
+                <button onclick="addToCart()" class="w-full border border-yellow-700 text-yellow-700 py-2 hover:bg-yellow-700 hover:text-white transition uppercase text-xs tracking-widest font-bold">Add to Cart</button>
+            </div>
+            <!-- Repeat the other two products as-is -->
+        </div>
     </section>
 
-    <section class="featured">
-        <h2 class="section-title">Our Best Sellers</h2>
-        <div class="grid">
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=500" alt="Ring">
-                <h3>Stainless Steel Ring</h3>
-                <p class="price">Rs. 499</p>
+    <section id="services" class="bg-stone-100 py-20">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+            <div>
+                <div class="text-4xl mb-4">✨</div>
+                <h4 class="text-xl font-bold mb-2 uppercase tracking-tighter">Premium Quality</h4>
+                <p class="text-gray-600">Anti-tarnish, waterproof stainless steel designed for daily wear.</p>
             </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=500" alt="Locket">
-                <h3>Stainless Steel Locket</h3>
-                <p class="price">Rs. 799</p>
+            <div>
+                <div class="text-4xl mb-4">🚚</div>
+                <h4 class="text-xl font-bold mb-2 uppercase tracking-tighter">Global Shipping</h4>
+                <p class="text-gray-600">Securely packaged and shipped to your doorstep worldwide.</p>
             </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=500" alt="Bangle">
-                <h3>Stainless Steel Bangle</h3>
-                <p class="price">Rs. 550</p>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1535633302704-5043dd58576e?w=500" alt="Earrings">
-                <h3>Stainless Steel Earrings</h3>
-                <p class="price">Rs. 499</p>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1598560917505-59a3ad559071?w=500" alt="Necklace">
-                <h3>Stainless Steel Necklace</h3>
-                <p class="price">Rs. 999</p>
+            <div>
+                <div class="text-4xl mb-4">🎁</div>
+                <h4 class="text-xl font-bold mb-2 uppercase tracking-tighter">Luxury Gifting</h4>
+                <p class="text-gray-600">Every order comes in our signature Variety Jewels box.</p>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 varietyjewels_np. All Rights Reserved.</p>
-        <p>Email: contact@varietyjewelsnp.com</p>
+    <section id="contact" class="py-20 max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-4xl mb-6">Visit Our Store</h2>
+                <p class="text-gray-600 mb-8 font-light">Experience our collection in person. Our experts are ready to help you find the perfect piece.</p>
+                
+                <div class="space-y-4">
+                    <div class="flex items-start space-x-4">
+                        <span class="text-yellow-700 font-bold">📍 Location:</span>
+                        <span>Tilottama-01,Nayamill,Rupandehi,Neapl</span>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <span class="text-yellow-700 font-bold">📞 Contact:</span>
+                        <span>+977 9847044335</span>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <span class="text-yellow-700 font-bold">Instagram:</span>
+                        <span>varietyjewels_np</span>
+                    </div>
+                </div>
+            </div>
+            
+           
+        </div>
+    </section>
+
+    <footer class="bg-zinc-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-2xl mb-6 tracking-widest">VARIETY JEWELS</h2>
+            <p class="text-zinc-500 text-sm mb-6">© 2024 Variety Jewelers. All Rights Reserved.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="hover:text-yellow-500">Instagram</a>
+                <a href="#" class="hover:text-yellow-500">Facebook</a>
+                <a href="#" class="hover:text-yellow-500">Pinterest</a>
+            </div>
+        </div>
     </footer>
+
+    <script>
+        let count = 0;
+        function addToCart() {
+            count++;
+            document.getElementById('cart-count').innerText = count;
+            alert("Item added to your craft!");
+        }
+    </script>
 </body>
 </html>
