@@ -3,67 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop Collection | varietyjewels_np</title>
+    <title>Products | varietyjewels_np</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --black: #1a1a1a;
-            --white: #ffffff;
-            --silver: #C0C0C0;
-            --light-grey: #f4f4f4;
-            --shadow: 0 10px 30px rgba(0,0,0,0.08);
-            --transition: all 0.3s ease;
-        }
-
+        :root { --black: #1a1a1a; --white: #ffffff; --silver: #C0C0C0; --shadow: 0 10px 30px rgba(0,0,0,0.1); }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', sans-serif; background-color: #fafafa; }
+        body { font-family: 'Poppins', sans-serif; background: #fafafa; }
 
         nav { position: sticky; top: 0; display: flex; justify-content: space-between; padding: 1rem 10%; background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.05); z-index: 1000; }
         .logo { font-weight: 600; font-size: 1.5rem; }
         .nav-links { display: flex; list-style: none; gap: 2rem; }
-        .nav-links a { text-decoration: none; color: var(--black); transition: var(--transition); }
-        .nav-links a:hover { color: var(--silver); }
+        .nav-links a { text-decoration: none; color: var(--black); }
 
         .container { padding: 5rem 10%; }
-        .page-title { text-align: center; margin-bottom: 4rem; font-size: 2.5rem; font-weight: 600; }
-
         .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; }
-
-        /* Product Cards */
-        .product-card {
-            background: var(--white); border-radius: 15px; overflow: hidden;
-            box-shadow: var(--shadow); transition: var(--transition);
-            display: flex; flex-direction: column;
-        }
-        .product-card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.15); }
         
-        .img-container { width: 100%; height: 320px; overflow: hidden; }
-        .product-card img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
-        .product-card:hover img { scale: 1.05; }
+        .card {
+            background: var(--white); border-radius: 12px; overflow: hidden;
+            box-shadow: var(--shadow); transition: 0.4s; text-align: center;
+        }
+        .card:hover { transform: translateY(-10px); }
+        .card img { width: 100%; height: 300px; object-fit: cover; transition: 0.5s; }
+        .card:hover img { transform: scale(1.05); }
 
-        .product-info { padding: 1.5rem; text-align: center; flex-grow: 1; }
-        .product-name { font-size: 1.2rem; margin-bottom: 10px; font-weight: 600; }
-        .product-desc { font-size: 0.9rem; color: #777; margin-bottom: 15px; min-height: 40px; }
-        .product-price { font-size: 1.1rem; font-weight: 600; color: var(--black); margin-bottom: 20px; display: block; }
+        .details { padding: 1.5rem; }
+        .details h2 { font-size: 1.2rem; margin-bottom: 10px; }
+        .details p { font-size: 0.9rem; color: #666; margin-bottom: 15px; }
+        .price { font-weight: 600; font-size: 1.1rem; display: block; margin-bottom: 15px; }
 
-        /* Buy Button */
-        .buy-btn {
+        .buy-now {
             background: var(--black); color: var(--white); border: none;
-            padding: 12px 30px; border-radius: 5px; cursor: pointer;
-            font-family: 'Poppins', sans-serif; font-weight: 400;
-            transition: var(--transition); text-transform: uppercase; letter-spacing: 1px;
+            padding: 10px 25px; border-radius: 4px; cursor: pointer;
+            transition: 0.3s; text-transform: uppercase; font-size: 0.8rem;
         }
-        .buy-btn:hover { background: #444; letter-spacing: 2px; }
+        .buy-now:hover { background: #444; letter-spacing: 1px; }
 
-        footer { background: var(--black); color: var(--white); padding: 3rem 10%; text-align: center; margin-top: 5rem; }
-
-        @media (max-width: 768px) {
-            .container { padding: 3rem 5%; }
-        }
+        footer { background: var(--black); color: var(--white); padding: 3rem 10%; text-align: center; }
     </style>
 </head>
 <body>
-
     <nav>
         <div class="logo">varietyjewels_np</div>
         <ul class="nav-links">
@@ -74,74 +52,64 @@
     </nav>
 
     <div class="container">
-        <h1 class="page-title">The Collection</h1>
-        
+        <h1 style="text-align: center; margin-bottom: 3rem;">Our Collection</h1>
         <div class="product-grid">
-            <div class="product-card">
-                <div class="img-container">
-                    <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600" alt="Ring">
-                </div>
-                <div class="product-info">
-                    <h2 class="product-name">Stainless Steel Ring</h2>
-                    <p class="product-desc">A sleek, high-polish band designed for daily comfort and timeless style.</p>
-                    <span class="product-price">Rs. 499</span>
-                    <button class="buy-btn">Buy Now</button>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="img-container">
-                    <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600" alt="Locket">
-                </div>
-                <div class="product-info">
-                    <h2 class="product-name">Stainless Steel Locket</h2>
-                    <p class="product-desc">Keep your memories close with this tarnish-resistant geometric locket.</p>
-                    <span class="product-price">Rs. 799</span>
-                    <button class="buy-btn">Buy Now</button>
+            
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1627225924765-552d49cf47ad?w=600" alt="Ring">
+                <div class="details">
+                    <h2>Stainless Steel Ring</h2>
+                    <p>High-grade 316L polished finish band for daily wear.</p>
+                    <span class="price">Rs. 499</span>
+                    <button class="buy-now">Buy Now</button>
                 </div>
             </div>
 
-            <div class="product-card">
-                <div class="img-container">
-                    <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=600" alt="Bangle">
-                </div>
-                <div class="product-info">
-                    <h2 class="product-name">Stainless Steel Bangle</h2>
-                    <p class="product-desc">Minimalist cuff design that pairs perfectly with any outfit, casual or formal.</p>
-                    <span class="product-price">Rs. 550</span>
-                    <button class="buy-btn">Buy Now</button>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600" alt="Locket">
+                <div class="details">
+                    <h2>Stainless Steel Locket</h2>
+                    <p>Elegant geometric locket that keeps your shine forever.</p>
+                    <span class="price">Rs. 799</span>
+                    <button class="buy-now">Buy Now</button>
                 </div>
             </div>
 
-            <div class="product-card">
-                <div class="img-container">
-                    <img src="https://images.unsplash.com/photo-1635767790454-3674e178c74a?w=600" alt="Earrings">
-                </div>
-                <div class="product-info">
-                    <h2 class="product-name">Stainless Steel Earrings</h2>
-                    <p class="product-desc">Lightweight hoops featuring a secure clasp and a radiant silver finish.</p>
-                    <span class="product-price">Rs. 499</span>
-                    <button class="buy-btn">Buy Now</button>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=600" alt="Bangle">
+                <div class="details">
+                    <h2>Stainless Steel Bangle</h2>
+                    <p>Minimalist stackable cuff with a sleek silver glow.</p>
+                    <span class="price">Rs. 550</span>
+                    <button class="buy-now">Buy Now</button>
                 </div>
             </div>
 
-            <div class="product-card">
-                <div class="img-container">
-                    <img src="https://images.unsplash.com/photo-1598560917505-59a3ad559071?w=600" alt="Necklace">
-                </div>
-                <div class="product-info">
-                    <h2 class="product-name">Stainless Steel Necklace</h2>
-                    <p class="product-desc">A delicate chain necklace that provides a subtle glow and effortless charm.</p>
-                    <span class="product-price">Rs. 999</span>
-                    <button class="buy-btn">Buy Now</button>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1535633302704-5043dd58576e?w=600" alt="Earrings">
+                <div class="details">
+                    <h2>Stainless Steel Earrings</h2>
+                    <p>Hypoallergenic lightweight hoops for sensitive skin.</p>
+                    <span class="price">Rs. 499</span>
+                    <button class="buy-now">Buy Now</button>
                 </div>
             </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1635767790454-3674e178c74a?w=600" alt="Necklace">
+                <div class="details">
+                    <h2>Stainless Steel Necklace</h2>
+                    <p>Classic silver chain necklace with tarnish-free coating.</p>
+                    <span class="price">Rs. 999</span>
+                    <button class="buy-now">Buy Now</button>
+                </div>
+            </div>
+
         </div>
     </div>
 
     <footer>
         <p>&copy; 2024 varietyjewels_np. All Rights Reserved.</p>
     </footer>
-
 </body>
 </html>
