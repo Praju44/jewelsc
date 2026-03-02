@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>varietyjewels_np | Timeless Shine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #1a1a1a;
+            --white: #ffffff;
+            --silver: #C0C0C0;
+            --light-grey: #f4f4f4;
+            --shadow: 0 4px 15px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; color: var(--black); background: var(--white); line-height: 1.6; }
+
+        /* Sticky Navigation */
+        nav {
+            position: sticky; top: 0; z-index: 1000;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1rem 10%; background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .logo { font-weight: 600; font-size: 1.5rem; letter-spacing: 1px; text-transform: lowercase; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a { text-decoration: none; color: var(--black); font-weight: 400; transition: var(--transition); }
+        .nav-links a:hover { color: var(--silver); }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=1600');
+            background-size: cover; background-position: center;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            color: var(--white); text-align: center; padding: 0 20px;
+        }
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; font-weight: 300; max-width: 600px; }
+
+        /* Welcome Section */
+        .welcome { padding: 5rem 10%; text-align: center; background: var(--light-grey); }
+        .welcome h2 { margin-bottom: 20px; font-size: 2rem; }
+
+        /* Featured Products */
+        .featured { padding: 5rem 10%; }
+        .section-title { text-align: center; margin-bottom: 3rem; font-size: 2rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; }
+        
+        .card {
+            background: var(--white); border-radius: 10px; overflow: hidden;
+            box-shadow: var(--shadow); transition: var(--transition); text-align: center;
+            padding-bottom: 1.5rem;
+        }
+        .card:hover { transform: translateY(-10px); }
+        .card img { width: 100%; height: 250px; object-fit: cover; }
+        .card h3 { margin: 15px 0 5px; font-size: 1.1rem; }
+        .card .price { color: #666; font-weight: 600; }
+
+        /* Footer */
+        footer { background: var(--black); color: var(--white); padding: 3rem 10%; text-align: center; }
+        .footer-content p { margin-bottom: 10px; opacity: 0.8; }
+
+        @media (max-width: 768px) {
+            nav { padding: 1rem 5%; }
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">varietyjewels_np</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="product.html">Products</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>Timeless Shine. Everyday Elegance.</h1>
+        <p>Premium stainless steel jewelry designed for the modern individual.</p>
+    </header>
+
+    <section class="welcome">
+        <h2>Welcome to Variety Jewels</h2>
+        <p>Discover a collection where durability meets high-fashion. Our jewelry is crafted from high-grade stainless steel, ensuring your pieces stay tarnish-free and beautiful for a lifetime.</p>
+    </section>
+
+    <section class="featured">
+        <h2 class="section-title">Featured Collection</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=500" alt="Ring">
+                <h3>Stainless Steel Ring</h3>
+                <p class="price">Rs. 499</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1598560917505-59a3ad559071?w=500" alt="Locket">
+                <h3>Stainless Steel Locket</h3>
+                <p class="price">Rs. 799</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=500" alt="Bangle">
+                <h3>Stainless Steel Bangle</h3>
+                <p class="price">Rs. 550</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 varietyjewels_np. All Rights Reserved.</p>
+            <p>Contact: info@varietyjewelsnp.com</p>
+        </div>
+    </footer>
+
+</body>
+</html>
