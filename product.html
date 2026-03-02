@@ -15,6 +15,7 @@
 </head>
 <body class="bg-cream text-gray-800">
 
+    <!-- Nav -->
     <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gold/20 shadow-sm">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="text-2xl font-bold tracking-widest text-yellow-700">VARIETY JEWELS</div>
@@ -33,6 +34,7 @@
         </div>
     </nav>
 
+    <!-- Header -->
     <header class="relative h-[50vh] flex items-center justify-center text-center text-white">
         <div class="absolute inset-0 z-0">
             <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover brightness-50" alt="Products Background">
@@ -43,9 +45,10 @@
         </div>
     </header>
 
+    <!-- Products Section -->
     <section class="py-20 max-w-7xl mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            <!-- Copy all product cards from index.html Collection Section here -->
+            <!-- Product 1 -->
             <div class="bg-white group overflow-hidden shadow-sm hover:shadow-xl transition p-4 border border-gray-100">
                 <div class="relative h-80 overflow-hidden mb-4 bg-gray-100">
                     <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&q=80&w=600" alt="Gold Ring" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
@@ -61,13 +64,45 @@
                 </div>
                 <button onclick="addToCart()" class="w-full border border-yellow-700 text-yellow-700 py-2 hover:bg-yellow-700 hover:text-white transition uppercase text-xs tracking-widest font-bold">Add to Cart</button>
             </div>
-            <!-- Repeat other products as needed -->
+
+            <!-- Product 2 -->
+            <div class="bg-white group overflow-hidden shadow-sm hover:shadow-xl transition p-4 border border-gray-100">
+                <div class="relative h-80 overflow-hidden mb-4 bg-gray-100">
+                    <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&q=80&w=600" alt="Necklace" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <span class="absolute top-2 left-2 bg-yellow-700 text-white text-xs px-2 py-1 uppercase">Best Seller</span>
+                </div>
+                <h3 class="text-xl mb-1">AD Crystal Pendant</h3>
+                <p class="text-gray-500 text-sm mb-3">American Diamond • Rose Gold Finish</p>
+                <div class="flex justify-between items-center mb-4">
+                    <div>
+                        <span class="text-xl font-semibold text-yellow-700">Rs1200.00</span>
+                        <span class="text-gray-400 line-through text-sm ml-2">Rs1500.00</span>
+                    </div>
+                </div>
+                <button onclick="addToCart()" class="w-full border border-yellow-700 text-yellow-700 py-2 hover:bg-yellow-700 hover:text-white transition uppercase text-xs tracking-widest font-bold">Add to Cart</button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="bg-white group overflow-hidden shadow-sm hover:shadow-xl transition p-4 border border-gray-100">
+                <div class="relative h-80 overflow-hidden mb-4 bg-gray-100">
+                    <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&q=80&w=600" alt="Bangle" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <h3 class="text-xl mb-1">Minimalist Bangle</h3>
+                <p class="text-gray-500 text-sm mb-3">Stainless Steel • Waterproof</p>
+                <div class="flex justify-between items-center mb-4">
+                    <div>
+                        <span class="text-xl font-semibold text-yellow-700">Rs350.00</span>
+                    </div>
+                </div>
+                <button onclick="addToCart()" class="w-full border border-yellow-700 text-yellow-700 py-2 hover:bg-yellow-700 hover:text-white transition uppercase text-xs tracking-widest font-bold">Add to Cart</button>
+            </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="bg-zinc-900 text-white py-12">
         <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-2xl mb-6 tracking-widest">VARIETY JEWELs</h2>
+            <h2 class="text-2xl mb-6 tracking-widest">VARIETY JEWELS</h2>
             <p class="text-zinc-500 text-sm mb-6">© 2024 Variety Jewels. All Rights Reserved.</p>
             <div class="flex justify-center space-x-6">
                 <a href="#" class="hover:text-yellow-500">Instagram</a>
@@ -82,7 +117,7 @@
         function addToCart() {
             count++;
             document.getElementById('cart-count').innerText = count;
-            alert("Item added to your craft!");
+            alert("Item added to your cart!");
         }
     </script>
 </body>
